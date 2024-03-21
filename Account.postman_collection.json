@@ -1,0 +1,356 @@
+{
+	"info": {
+		"_postman_id": "c6bffaf6-7fb8-49cb-a8c7-73ddc045de98",
+		"name": "Account",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33178440"
+	},
+	"item": [
+		{
+			"name": "getAllAccounts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/passive-accounts/accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"passive-accounts",
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAccountsByCustomerId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/passive-accounts/findAccountsByCustomerId/65faa23d7e7e657479714f62",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"passive-accounts",
+						"findAccountsByCustomerId",
+						"65faa23d7e7e657479714f62"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveSavingAccount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\": \"65fc4438c0acc50e3b04c18f\",\r\n    \"accountType\": \"SAVING_ACCOUNT\",\r\n    \"accountInfo\": {\r\n        \"maximumNumberOfOperations\": 5,\r\n        \"operationCommissionPercentage\": 10,\r\n        \"maintenanceCommissionPercentage\": 0\r\n    },\r\n    \"issueDate\": \"2024-01-09\",\r\n    \"dueDate\": \"2026-01-04\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/passive-accounts/saveAccount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"passive-accounts",
+						"saveAccount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveSavingAccountVIP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\": \"65fc444dc0acc50e3b04c190\",\r\n    \"accountType\": \"SAVING_ACCOUNT_VIP\",\r\n    \"accountInfo\": {\r\n        \"maximumNumberOfOperations\": 5,\r\n        \"operationCommissionPercentage\": 10,\r\n        \"maintenanceCommissionPercentage\": 0\r\n    },\r\n    \"issueDate\": \"2024-03-30\",\r\n    \"dueDate\": \"2026-01-04\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/passive-accounts/saveAccount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"passive-accounts",
+						"saveAccount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveCurrentAccount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\": \"65fc4469c0acc50e3b04c192\",\r\n    \"accountType\": \"CURRENT_ACCOUNT\",\r\n    \"accountInfo\": {\r\n        \"maintenanceCommissionPercentage\": 10\r\n    },\r\n    \"issueDate\": \"2020-01-09\",\r\n    \"dueDate\": \"2026-01-04\",\r\n    \"holders\": [\r\n        {\r\n            \"name\": \"Mario\",\r\n            \"lastname\": \"Araujo\",\r\n            \"identityNumber\": \"88554461\",\r\n            \"address\": \"String\",\r\n            \"email\": \"String\",\r\n            \"phoneNumber\": \"String\",\r\n            \"mobileNumber\": \"String\",\r\n            \"birthdate\": \"1980-07-11T00:00:00.000+00:00\"\r\n        }\r\n    ],\r\n    \"signers\": [\r\n        {\r\n            \"name\": \"String\",\r\n            \"lastname\": \"String\",\r\n            \"identityNumber\": \"String\",\r\n            \"address\": \"String\",\r\n            \"email\": \"String\",\r\n            \"phoneNumber\": \"String\",\r\n            \"mobileNumber\": \"String\",\r\n            \"birthdate\": \"2000-05-01T00:00:00.000+00:00\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/passive-accounts/saveAccount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"passive-accounts",
+						"saveAccount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveCurrentAccountPyme",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\": \"65fc445ec0acc50e3b04c191\",\r\n    \"accountType\": \"CURRENT_ACCOUNT_PYME\",\r\n    \"accountInfo\": {\r\n        \"maintenanceCommissionPercentage\": 10\r\n    },\r\n    \"issueDate\": \"2020-01-09\",\r\n    \"dueDate\": \"2026-01-04\",\r\n    \"holders\": [\r\n        {\r\n            \"name\": \"Mario\",\r\n            \"lastname\": \"Araujo\",\r\n            \"identityNumber\": \"88554461\",\r\n            \"address\": \"String\",\r\n            \"email\": \"String\",\r\n            \"phoneNumber\": \"String\",\r\n            \"mobileNumber\": \"String\",\r\n            \"birthdate\": \"1980-07-11T00:00:00.000+00:00\"\r\n        }\r\n    ],\r\n    \"signers\": [\r\n        {\r\n            \"name\": \"String\",\r\n            \"lastname\": \"String\",\r\n            \"identityNumber\": \"String\",\r\n            \"address\": \"String\",\r\n            \"email\": \"String\",\r\n            \"phoneNumber\": \"String\",\r\n            \"mobileNumber\": \"String\",\r\n            \"birthdate\": \"2000-05-01T00:00:00.000+00:00\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/passive-accounts/saveAccount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"passive-accounts",
+						"saveAccount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveFixTermAccount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\": \"65fc494ac0acc50e3b04c193\",\r\n    \"accountType\": \"FIX_TERM_ACCOUNT\",\r\n    \"accountInfo\": {\r\n        \"maximumNumberOfOperations\": 1,\r\n        \"allowedDayForOperations\": 11\r\n    },\r\n    \"issueDate\": \"2020-01-09\",\r\n    \"dueDate\": \"2026-01-04\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/passive-accounts/saveAccount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"passive-accounts",
+						"saveAccount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveMovementDeposit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"65fc47763f560b27a9d1be1c\",\r\n    \"movement\": {\r\n        \"type\": \"DEPOSIT\",\r\n        \"amount\": 900.00\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/passive-accounts/saveMovement",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"passive-accounts",
+						"saveMovement"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveMovementWithdrawal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"65fc47763f560b27a9d1be1c\",\r\n    \"movement\": {\r\n        \"type\": \"WITHDRAWAL\",\r\n        \"amount\": 900.00\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/passive-accounts/saveMovement",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"passive-accounts",
+						"saveMovement"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveMovementTransfer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"65fc47763f560b27a9d1be1c\",\r\n    \"movement\": {\r\n        \"type\": \"TRANSFER_OUT\",\r\n        \"amount\": 900.00\r\n    },\r\n    \"targetId\": \"65fc48753f560b27a9d1be1d\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/passive-accounts/saveMovement",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"passive-accounts",
+						"saveMovement"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findMovementsByAccountId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/passive-accounts/findMovementsByAccountId/65fc47763f560b27a9d1be1c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"passive-accounts",
+						"findMovementsByAccountId",
+						"65fc47763f560b27a9d1be1c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findBalancesByCustomerId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/passive-accounts/findBalancesByCustomerId/65fc4438c0acc50e3b04c18f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"passive-accounts",
+						"findBalancesByCustomerId",
+						"65fc4438c0acc50e3b04c18f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findCommissionsBetweenDatesByAccountId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/passive-accounts/findCommissionsBetweenDatesByAccountId/65fc47763f560b27a9d1be1c?date-from=2024-01-01&date-to=2024-03-21",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"passive-accounts",
+						"findCommissionsBetweenDatesByAccountId",
+						"65fc47763f560b27a9d1be1c"
+					],
+					"query": [
+						{
+							"key": "date-from",
+							"value": "2024-01-01"
+						},
+						{
+							"key": "date-to",
+							"value": "2024-03-21"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

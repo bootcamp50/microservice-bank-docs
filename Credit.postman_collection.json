@@ -1,0 +1,222 @@
+{
+	"info": {
+		"_postman_id": "2a48bbf8-1aef-40e8-9ba1-78af24263c2d",
+		"name": "Credit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33178440"
+	},
+	"item": [
+		{
+			"name": "getAllCredits",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/credit/credits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"credit",
+						"credits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findMovementsByCreditId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/credit/findMovementsByCreditId/65fc68a6795920053d50e8b0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"credit",
+						"findMovementsByCreditId",
+						"65fc68a6795920053d50e8b0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCreditsByCustomerId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/credit/findCreditsByCustomerId/65fc4438c0acc50e3b04c18f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"credit",
+						"findCreditsByCustomerId",
+						"65fc4438c0acc50e3b04c18f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCreditsByCustomerId Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/credit/findBalancesByCustomerId/65fc4438c0acc50e3b04c18f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"credit",
+						"findBalancesByCustomerId",
+						"65fc4438c0acc50e3b04c18f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveCreditPersonal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\": \"65fc4438c0acc50e3b04c18f\",\r\n    \"creditAmountLimit\": 8000.00,\r\n    \"issueDate\": \"2019-09-27\",\r\n    \"paymentDate\": \"2023-09-27\",\r\n    \"creditInfo\": {\r\n        \"interestPercentage\": 3,\r\n        \"closingDay\": 5\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/credit/saveCredit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"credit",
+						"saveCredit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveCreditEnterprise",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\": \"65fc4469c0acc50e3b04c192\",\r\n    \"creditAmountLimit\": 8000.00,\r\n    \"issueDate\": \"2019-09-27\",\r\n    \"paymentDate\": \"2023-09-27\",\r\n    \"creditInfo\": {\r\n        \"interestPercentage\": 3,\r\n        \"closingDay\": 5\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/credit/saveCredit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"credit",
+						"saveCredit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "payCredit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/credit/payCredit/cf945e4d-b4ef-43ef-87c0-17ad0b246597",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"credit",
+						"payCredit",
+						"cf945e4d-b4ef-43ef-87c0-17ad0b246597"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generateBillingOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/credit/generateBillingOrder/65fc68a6795920053d50e8b0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"credit",
+						"generateBillingOrder",
+						"65fc68a6795920053d50e8b0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consumeCredit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"65fc68a6795920053d50e8b0\",\r\n    \"amount\": \"100\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/credit/consumeCredit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"credit",
+						"consumeCredit"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

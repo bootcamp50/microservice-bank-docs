@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "f5712c90-8d75-4f13-a825-f2fb0091de45",
+		"name": "Customer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33178440"
+	},
+	"item": [
+		{
+			"name": "getCustomers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/person/getCustomers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"person",
+						"getCustomers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/person/getCustomer/65faa23d7e7e657479714f62",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"person",
+						"getCustomer",
+						"65faa23d7e7e657479714f62"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveCustomerEnterprise",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"personType\": \"ENTERPRISE\",\r\n    \"enterpriseInfo\": {\r\n        \"ruc\": \"78965412302\",\r\n        \"companyName\": \"Acme IN\",\r\n        \"representatives\": [\r\n                {\r\n                    \"firstName\": \"Maria\",\r\n                    \"lastName\": \"Lopez\",\r\n                    \"typeDocument\": \"DNI\",\r\n                    \"numberDocument\": \"12361113\"\r\n                },\r\n                {\r\n                    \"firstName\": \"Luis\",\r\n                    \"lastName\": \"Sanchez\",\r\n                    \"typeDocument\": \"DNI\",\r\n                    \"numberDocument\": \"12444473\"\r\n                }\r\n            ]\r\n    }\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/person/saveCustomer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"person",
+						"saveCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveCustomerEnterprisePyme",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"personType\": \"ENTERPRISE_PYME\",\r\n    \"enterpriseInfo\": {\r\n        \"ruc\": \"78963332302\",\r\n        \"companyName\": \"Toyota INC\",\r\n        \"representatives\": [\r\n                {\r\n                    \"firstName\": \"Maria\",\r\n                    \"lastName\": \"Lopez\",\r\n                    \"typeDocument\": \"DNI\",\r\n                    \"numberDocument\": \"12361113\"\r\n                },\r\n                {\r\n                    \"firstName\": \"Luis\",\r\n                    \"lastName\": \"Sanchez\",\r\n                    \"typeDocument\": \"DNI\",\r\n                    \"numberDocument\": \"12444473\"\r\n                }\r\n            ]\r\n    }\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/person/saveCustomer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"person",
+						"saveCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveCustomerPersonal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"personType\": \"PERSONAL\",\r\n    \"personalInfo\": {\r\n        \"firstName\": \"Juan\",\r\n        \"lastName\": \"Pepe\",\r\n        \"typeDocument\": \"DNI\",\r\n        \"numberDocument\": \"12365473\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/person/saveCustomer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"person",
+						"saveCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveCustomerPersonal VIP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"personType\": \"PERSONAL_VIP\",\r\n    \"personalInfo\": {\r\n        \"firstName\": \"Jose\",\r\n        \"lastName\": \"Pedro\",\r\n        \"typeDocument\": \"DNI\",\r\n        \"numberDocument\": \"15555473\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/person/saveCustomer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"person",
+						"saveCustomer"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
