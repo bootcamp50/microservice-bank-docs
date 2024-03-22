@@ -1,0 +1,32 @@
+-- network
+docker network create bank-network
+
+-- bank-config
+docker build -t bank-config .
+docker run -d --name bank-config --network bank-network -p 8888:8888 -e HOSTNAME=bank-config bank-config
+
+-- bank-discovery
+docker build -t bank-discovery .
+docker run -d --name bank-discovery --network bank-network -p 8761:8761 -e HOSTNAME=bank-discovery bank-discovery
+
+-- bank-gateway
+docker build -t bank-gateway .
+docker run -d --name bank-gateway --network bank-network -p 8090:8090 -e HOSTNAME=bank-gateway bank-gateway
+
+-- credit-accounts
+docker build -t credit-accounts .
+docker run -d --name credit-accounts --network bank-network -p 8083:8083 -e HOSTNAME=credit-accounts credit-accounts
+
+-- customers
+docker build -t customers .
+docker run -d --name customers --network bank-network -p 8081:8081 -p 6379:6379 -e HOSTNAME=customers customers
+
+-- passive-accounts
+docker build -t passive-accounts .
+docker run -d --name passive-accounts --network bank-network -p 8082:8082 -e HOSTNAME=passive-accounts passive-accounts
+
+-- wallet
+docker build -t wallet .
+docker run -d --name wallet --network bank-network -p 8084:8084 -e HOSTNAME=wallet wallet
+
+

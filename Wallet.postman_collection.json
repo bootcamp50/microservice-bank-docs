@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "912c5967-c99c-4bdf-94c4-3269a134cbf7",
+		"name": "Wallet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33178440"
+	},
+	"item": [
+		{
+			"name": "findAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/wallet/findAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"wallet",
+						"findAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findWalletById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/wallet/findWalletById/65fcd82af6c039210c8ab681",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"wallet",
+						"findWalletById",
+						"65fcd82af6c039210c8ab681"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createWallet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer\": {\r\n        \"id\": \"65fcd7f00f601d5488aeba50\"\r\n\r\n    }\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/wallet/createWallet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"wallet",
+						"createWallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generatePurchaseRequest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"65fcd82af6c039210c8ab681\",\r\n    \"operation\": {\r\n        \"paymentType\": \"BUY\",\r\n        \"amount\": 3.00\r\n\r\n    }\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/wallet/generatePurchaseRequest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"wallet",
+						"generatePurchaseRequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "acceptPurchaseRequest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"65fcd82af6c039210c8ab681\",\r\n    \"operationId\": \"b848729b-5adf-4c3d-bfe4-727715157631\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/wallet/acceptPurchaseRequest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"wallet",
+						"acceptPurchaseRequest"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
